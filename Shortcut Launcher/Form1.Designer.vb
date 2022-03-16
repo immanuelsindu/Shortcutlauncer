@@ -26,6 +26,7 @@ Partial Class Form1
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.ShortcutToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.AddNewShortcutToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ExitToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.HelpToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Button1 = New System.Windows.Forms.Button()
@@ -33,8 +34,13 @@ Partial Class Form1
         Me.ImageList1 = New System.Windows.Forms.ImageList(Me.components)
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
+        Me.RefreshToolStripMenuItem = New System.Windows.Forms.ToolStripSeparator()
+        Me.ExitToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ContextMenuStrip1 = New System.Windows.Forms.ContextMenuStrip(Me.components)
+        Me.EditShortcutToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         Me.Panel1.SuspendLayout()
+        Me.ContextMenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
         'MenuStrip1
@@ -48,7 +54,7 @@ Partial Class Form1
         '
         'ShortcutToolStripMenuItem
         '
-        Me.ShortcutToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AddNewShortcutToolStripMenuItem})
+        Me.ShortcutToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AddNewShortcutToolStripMenuItem, Me.RefreshToolStripMenuItem, Me.ExitToolStripMenuItem, Me.ExitToolStripMenuItem1})
         Me.ShortcutToolStripMenuItem.Name = "ShortcutToolStripMenuItem"
         Me.ShortcutToolStripMenuItem.Size = New System.Drawing.Size(64, 20)
         Me.ShortcutToolStripMenuItem.Text = "Shortcut"
@@ -56,8 +62,14 @@ Partial Class Form1
         'AddNewShortcutToolStripMenuItem
         '
         Me.AddNewShortcutToolStripMenuItem.Name = "AddNewShortcutToolStripMenuItem"
-        Me.AddNewShortcutToolStripMenuItem.Size = New System.Drawing.Size(171, 22)
+        Me.AddNewShortcutToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.AddNewShortcutToolStripMenuItem.Text = "Add New Shortcut"
+        '
+        'ExitToolStripMenuItem
+        '
+        Me.ExitToolStripMenuItem.Name = "ExitToolStripMenuItem"
+        Me.ExitToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.ExitToolStripMenuItem.Text = "Refresh"
         '
         'HelpToolStripMenuItem
         '
@@ -112,6 +124,29 @@ Partial Class Form1
         Me.ToolTip1.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info
         Me.ToolTip1.ToolTipTitle = "ShortcutLauncer Tip :"
         '
+        'RefreshToolStripMenuItem
+        '
+        Me.RefreshToolStripMenuItem.Name = "RefreshToolStripMenuItem"
+        Me.RefreshToolStripMenuItem.Size = New System.Drawing.Size(177, 6)
+        '
+        'ExitToolStripMenuItem1
+        '
+        Me.ExitToolStripMenuItem1.Name = "ExitToolStripMenuItem1"
+        Me.ExitToolStripMenuItem1.Size = New System.Drawing.Size(180, 22)
+        Me.ExitToolStripMenuItem1.Text = "Exit"
+        '
+        'ContextMenuStrip1
+        '
+        Me.ContextMenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.EditShortcutToolStripMenuItem})
+        Me.ContextMenuStrip1.Name = "ContextMenuStrip1"
+        Me.ContextMenuStrip1.Size = New System.Drawing.Size(181, 48)
+        '
+        'EditShortcutToolStripMenuItem
+        '
+        Me.EditShortcutToolStripMenuItem.Name = "EditShortcutToolStripMenuItem"
+        Me.EditShortcutToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.EditShortcutToolStripMenuItem.Text = "Edit Shortcut"
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -128,6 +163,7 @@ Partial Class Form1
         Me.MenuStrip1.ResumeLayout(False)
         Me.MenuStrip1.PerformLayout()
         Me.Panel1.ResumeLayout(False)
+        Me.ContextMenuStrip1.ResumeLayout(False)
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -143,4 +179,9 @@ Partial Class Form1
     Friend WithEvents ImageList1 As ImageList
     Friend WithEvents TextBox1 As TextBox
     Friend WithEvents ToolTip1 As ToolTip
+    Friend WithEvents ExitToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents RefreshToolStripMenuItem As ToolStripSeparator
+    Friend WithEvents ExitToolStripMenuItem1 As ToolStripMenuItem
+    Friend WithEvents ContextMenuStrip1 As ContextMenuStrip
+    Friend WithEvents EditShortcutToolStripMenuItem As ToolStripMenuItem
 End Class

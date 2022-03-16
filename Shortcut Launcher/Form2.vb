@@ -24,9 +24,6 @@ Public Class Form2
         txtName.Text = String.Empty
         txtPath.Text = String.Empty
         txtDescription.Text = String.Empty
-
-
-
         Me.Close()
     End Sub
 

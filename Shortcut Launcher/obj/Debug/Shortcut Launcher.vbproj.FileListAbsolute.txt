@@ -12,3 +12,4 @@ C:\Users\Sindu\source\repos\Shortcut Launcher\Shortcut Launcher\obj\Debug\Shortc
 C:\Users\Sindu\source\repos\Shortcut Launcher\Shortcut Launcher\obj\Debug\Shortcut Launcher.xml
 C:\Users\Sindu\source\repos\Shortcut Launcher\Shortcut Launcher\obj\Debug\Shortcut Launcher.pdb
 C:\Users\Sindu\source\repos\Shortcut Launcher\Shortcut Launcher\obj\Debug\Shortcut_Launcher.Form2.resources
+C:\Users\Sindu\source\repos\Shortcut Launcher\Shortcut Launcher\obj\Debug\Shortcut_Launcher.Form3.resources
