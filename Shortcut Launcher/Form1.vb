@@ -70,17 +70,20 @@ Public Class Form1
             newButton.Image = ImageList1.Images(ButtonNameForExt)
             newButton.ImageAlign = ContentAlignment.TopCenter
             newButton.BackgroundImageLayout = ImageLayout.Stretch
+            newButton.Name = "btn" & Names
 
 
             Panel1.Controls.Add(newButton)
+            AddHandler newButton.Click, AddressOf Me.Button_Click
             buttonCounter += 1
         ElseIf buttonCounter > 8 Then
             MessageBox.Show("Shortcut maksimal hanya 9")
         End If
     End Sub
 
-    Private Sub Button2_Click(sender As Object, e As EventArgs)
-
+    Private Sub Button_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
+        'MessageBox.Show("Nama button = " & Me.Name)
+        Process.Start(Path)
     End Sub
 
 
