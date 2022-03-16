@@ -21,24 +21,41 @@ Public Class Form1
         LocationList.Add(New KeyValuePair(Of Integer, Integer)(128, 214))
         LocationList.Add(New KeyValuePair(Of Integer, Integer)(242, 214))
 
+        Dim r As StreamReader = New StreamReader("f:/dataLauncher.txt")
+        Dim line As String
+        line = r.ReadLine
 
-        Using r As StreamReader = New StreamReader("f:/dataLauncher.txt")
-            ' Store contents in this String.
-            Dim line As String
-            Dim hasil As List(Of String)
+        Dim ini As New IniFile
+        ini.Load("f:\dataLauncher.txt")
 
-            ' Read first line.
-            'line = r.ReadLine
+        While Not line Is Nothing
+            Dim hasil As IniFile.IniSection
+            hasil = ini.GetSection(line)
+            Label1.Text = CStr(hasil)
+            Exit While
 
-            While Not r Is Nothing
-                hasil.Add(CStr(r.ReadLine))
-            End While
-
-
-            TextBox1.Text = hasil.ElementAt(0)
-        End Using
+        End While
 
 
+
+
+
+
+
+        ' Store contents in this String.
+
+        'Dim hasil As List(Of String)
+
+        ' Read first line.
+
+
+        'While Not r Is Nothing
+        'hasil.Add(CStr(r.ReadLine))
+        'End While
+
+
+        'TextBox1.Text = hasil.ElementAt(0)
+        'End Using
     End Sub
 
     Private Sub AddNewShortcutToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AddNewShortcutToolStripMenuItem.Click

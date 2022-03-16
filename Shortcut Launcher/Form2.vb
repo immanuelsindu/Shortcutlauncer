@@ -1,4 +1,6 @@
 ﻿Imports System.IO
+Imports iniFileVB
+
 
 Public Class Form2
 
@@ -7,13 +9,17 @@ Public Class Form2
         Form1.Path = txtPath.Text
         Form1.Description = txtDescription.Text
 
-        Dim file As System.IO.StreamWriter
-        file = My.Computer.FileSystem.OpenTextFileWriter("f:\dataLauncher.txt", True)
-        file.WriteLine("[" & txtPath.Text & "]" & Environment.NewLine & txtPath.Text & Environment.NewLine & txtName.Text & Environment.NewLine & txtDescription.Text & Environment.NewLine)
-        'file.WriteLine(txtPath.Text)
-        'file.WriteLine(txtName.Text)
-        'file.WriteLine(txtDescription.Text)
-        file.Close()
+        Dim ini As New IniFile
+        ini.Load("f:\dataLauncher.txt")
+        ini.AddSection(txtPath.Text).AddKey("Path").Value = txtPath.Text
+        ini.AddSection(txtPath.Text).AddKey("Name").Value = txtName.Text
+        ini.AddSection(txtPath.Text).AddKey("Description").Value = txtDescription.Text
+        ini.Save("f:\dataLauncher.txt")
+
+        'Dim file As System.IO.StreamWriter
+        'ile = My.Computer.FileSystem.OpenTextFileWriter("f:\dataLauncher.txt", True)
+        'File.WriteLine("[" & txtPath.Text & "]" & Environment.NewLine & txtPath.Text & Environment.NewLine & txtName.Text & Environment.NewLine & txtDescription.Text)
+        'File.Close()
 
         txtName.Text = String.Empty
         txtPath.Text = String.Empty
