@@ -80,7 +80,6 @@ Partial Class Form1
         Me.Button1.Size = New System.Drawing.Size(92, 82)
         Me.Button1.TabIndex = 0
         Me.Button1.Text = "Button1"
-        Me.Button1.TextAlign = System.Drawing.ContentAlignment.BottomCenter
         Me.Button1.UseVisualStyleBackColor = True
         Me.Button1.Visible = False
         '

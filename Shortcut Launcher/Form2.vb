@@ -33,7 +33,14 @@ Public Class Form2
     Private Sub btnPath_Click(sender As Object, e As EventArgs) Handles btnPath.Click
         OpenFileDialog1.ShowDialog()
         txtPath.Text = OpenFileDialog1.FileName
-        PictureBox1.Image = Image.FromFile(OpenFileDialog1.FileName)
+        Dim iconForFile As Icon = SystemIcons.WinLogo
+        Dim ext As String = Path.GetExtension(OpenFileDialog1.FileName)
+        iconForFile = System.Drawing.Icon.ExtractAssociatedIcon(OpenFileDialog1.FileName)
+        Form1.ImageList1.Images.Add(ext, iconForFile)
+        Form1.ButtonNameForExt = ext
+
+        PictureBox1.Image = Form1.ImageList1.Images(ext)
+        'PictureBox1.Image = Image.FromFile(OpenFileDialog1.FileName)
 
 
 

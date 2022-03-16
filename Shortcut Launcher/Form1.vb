@@ -5,6 +5,8 @@ Public Class Form1
     Public Property Path As String = String.Empty
     Public Property Description As String = String.Empty
 
+    Public Property ButtonNameForExt As String = String.Empty
+
     Dim list As New List(Of String)
     Dim buttonCounter As Integer = 0
     Dim LocationList As List(Of KeyValuePair(Of Integer, Integer)) = New List(Of KeyValuePair(Of Integer, Integer))
@@ -21,20 +23,14 @@ Public Class Form1
         LocationList.Add(New KeyValuePair(Of Integer, Integer)(128, 214))
         LocationList.Add(New KeyValuePair(Of Integer, Integer)(242, 214))
 
-        Dim r As StreamReader = New StreamReader("f:/dataLauncher.txt")
-        Dim line As String
-        line = r.ReadLine
+        'Dim r As StreamReader = New StreamReader("\dataLauncher.txt")
+        'Dim line As String
+        'line = r.ReadLine
 
-        Dim ini As New IniFile
-        ini.Load("f:\dataLauncher.txt")
+        'Dim ini As New IniFile
+        'ini.Load("\dataLauncher.txt")
 
-        While Not line Is Nothing
-            Dim hasil As IniFile.IniSection
-            hasil = ini.GetSection(line)
-            Label1.Text = CStr(hasil)
-            Exit While
 
-        End While
 
 
 
@@ -71,8 +67,10 @@ Public Class Form1
             newButton.Visible = True
             newButton.Text = Names
             newButton.ImageList = ImageList1
-            newButton.Image = Image.FromFile(Path)
+            newButton.Image = ImageList1.Images(ButtonNameForExt)
             newButton.ImageAlign = ContentAlignment.TopCenter
+            newButton.BackgroundImageLayout = ImageLayout.Stretch
+
 
             Panel1.Controls.Add(newButton)
             buttonCounter += 1
