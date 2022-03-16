@@ -32,6 +32,7 @@ Partial Class Form1
         Me.Label1 = New System.Windows.Forms.Label()
         Me.ImageList1 = New System.Windows.Forms.ImageList(Me.components)
         Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
         Me.MenuStrip1.SuspendLayout()
         Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
@@ -106,6 +107,11 @@ Partial Class Form1
         Me.TextBox1.Size = New System.Drawing.Size(288, 77)
         Me.TextBox1.TabIndex = 3
         '
+        'ToolTip1
+        '
+        Me.ToolTip1.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info
+        Me.ToolTip1.ToolTipTitle = "ShortcutLauncer Tip :"
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -136,4 +142,5 @@ Partial Class Form1
     Friend WithEvents Label1 As Label
     Friend WithEvents ImageList1 As ImageList
     Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents ToolTip1 As ToolTip
 End Class

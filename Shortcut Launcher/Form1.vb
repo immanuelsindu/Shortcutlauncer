@@ -71,6 +71,10 @@ Public Class Form1
             newButton.ImageAlign = ContentAlignment.TopCenter
             newButton.BackgroundImageLayout = ImageLayout.Stretch
             newButton.Name = "btn" & Names
+            Dim mytooltip As ToolTip = New ToolTip
+            mytooltip.ToolTipIcon = ToolTipIcon.Info
+            mytooltip.ToolTipTitle = "Shortcut Launcer Tip"
+            mytooltip.SetToolTip(newButton, Description)
 
 
             Panel1.Controls.Add(newButton)
